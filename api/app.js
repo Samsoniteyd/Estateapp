@@ -10,7 +10,7 @@ app.use(cookieParser())
 
 app.use("/api/posts", postRoute);
 app.use("/api/auth", authRoute);
-
+ 
 
 
 app.listen(8800, ()=>{
