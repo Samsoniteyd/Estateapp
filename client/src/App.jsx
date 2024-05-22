@@ -3,7 +3,9 @@ import HomePage from './routes/homePage/homePage';
 import Layout from './routes/layout/layout';
 import ListPage from './routes/listPage/listPage';
 import SinglePage from './routes/singlePage/singlePage';
-import ProfilePage from './routes/profilePage/profilePage'; 
+import ProfilePage from './routes/profilePage/profilePage';
+import Login from './routes/login/login'; 
+import Register from './routes/register/register'; 
 import {
   createBrowserRouter,
   RouterProvider,
