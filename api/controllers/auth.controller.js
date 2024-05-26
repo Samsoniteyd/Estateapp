@@ -57,6 +57,7 @@ const { username, password } = req.body;
 
     const token = jwt.sign({
         id:user.id,
+        isAdmin: false,
 
     }, process.env.JWT_SECRET_KEY, 
 {expiresIn: age});

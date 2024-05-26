@@ -1,19 +1,23 @@
 import React from 'react'
 import "./login.scss";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from 'react';
+import { useContext,  useState} from 'react';
 import apiRequest from '../../lib/apiRequest';
+import {AuthContext} from "../../context/AuthContext";
+
 
 const login = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate(); 
     const [isLoading, setIsLoading] = useState(false); 
   
+
+    const {updateUser} = useContext (AuthContext)
    
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
-        setError("")
+        setError("") 
         const formData = new FormData(e.target);
     
         const username = formData.get("username");
@@ -27,7 +31,8 @@ const login = () => {
       
           });
 
-          localStorage.setItem("user", json.stringify(res.data))
+          updateUser(res.data)
+
           
           navigate("/") 
         } catch(err) {
