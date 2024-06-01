@@ -39,10 +39,10 @@ const profileUpdatePage = () => {
       </form>
     </div>
     <div className="sideContainer">
-      <img src={currentUser.avatar} alt="" className="avatar" />
+      <img src={currentUser.avatar || "/size.png" } alt="" className="avatar" />
     </div>
   </div>
   )
 }
-
+ 
 export default profileUpdatePage

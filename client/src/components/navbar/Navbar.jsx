@@ -26,7 +26,7 @@ const Navbar = () => {
           <a href="/">Agent</a>
         </div>
         <div className='right'>
-        {currentUser? ( 
+        {currentUser ? ( 
         <div className='user'>
             <img
               src={currentUser.avatar || "/size.png"}

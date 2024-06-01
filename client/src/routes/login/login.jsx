@@ -29,7 +29,7 @@ const login = () => {
             username, 
             password,
       
-          });
+          }); 
 
           updateUser(res.data)
 
