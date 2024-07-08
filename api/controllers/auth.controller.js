@@ -8,7 +8,7 @@ export const register = async (req, res) => {
     const {username, email, password } = req.body;
 // //    db operations  
 // console.log (req.body);
-try{
+try{ 
 
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10); 
